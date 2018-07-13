@@ -36,3 +36,11 @@
 [[constraint]]
   name = "github.com/ethereum/go-ethereum"
   version = "1.8.12"
+
+[[constraint]]
+  name = "github.com/libp2p/go-libp2p-peer"
+  version = "2.3.5"
+
+[[constraint]]
+  name = "github.com/libp2p/go-libp2p-crypto"
+  version = "1.6.2"

@@ -3,6 +3,18 @@
 
 [[projects]]
   branch = "master"
+  digest = "1:5abd22a5ff4bf419426ec8cef91cb9620a6f527bcd13b8382f8859f990b66e6a"
+  name = "github.com/agl/ed25519"
+  packages = [
+    ".",
+    "edwards25519",
+    "extra25519",
+  ]
+  pruneopts = "T"
+  revision = "5312a61534124124185d41f09206b9fef1d88403"
+
+[[projects]]
+  branch = "master"
   digest = "1:cafb561ce87d0eaa309ad6853380d437df3c1142561c5afa700311825aa38df1"
   name = "github.com/btcsuite/btcd"
   packages = ["btcec"]
@@ -46,6 +58,14 @@
   version = "v1.7.0"
 
 [[projects]]
+  digest = "1:2a1db9bae44464f781d3637b67df38e896c6e1b9c902e27d24ee9037cb50f23b"
+  name = "github.com/gogo/protobuf"
+  packages = ["proto"]
+  pruneopts = "T"
+  revision = "1adfc126b41513cc696b209667c8656ea7aac67c"
+  version = "v1.0.0"
+
+[[projects]]
   branch = "master"
   digest = "1:968462840e6d86b12990015ac6ab297c022ccde102953040724be1df0e9e6c96"
   name = "github.com/golang/snappy"
@@ -78,12 +98,60 @@
   revision = "1395d1447324cbea88d249fbfcfd70ea878fdfca"
 
 [[projects]]
+  digest = "1:dd959f2e5dcedd3ea55b7a02af1de22d27a7390896e33f32cb6f6cabe8918f84"
+  name = "github.com/ipfs/go-log"
+  packages = [
+    ".",
+    "tracer",
+    "tracer/wire",
+    "writer",
+  ]
+  pruneopts = "T"
+  revision = "5dc2060baaf8db344f31dafd852340b93811d03f"
+  version = "v1.5.3"
+
+[[projects]]
   digest = "1:32b82e71cf24f8b78323e0d7903c4b90278486283965aa2a19b1ea13763b8f34"
   name = "github.com/jackpal/go-nat-pmp"
   packages = ["."]
   pruneopts = "T"
   revision = "c9cfead9f2a36ddf3daa40ba269aa7f4bbba6b62"
   version = "v1.0.1"
+
+[[projects]]
+  digest = "1:ab1a5449c35caf516f8a96576e73d0c2fc71a9061b0321c0e605396adcf73e6c"
+  name = "github.com/libp2p/go-libp2p-crypto"
+  packages = [
+    ".",
+    "pb",
+  ]
+  pruneopts = "T"
+  revision = "50487e0f0b4842e9e657317e689fbb8209fab2dc"
+  version = "v1.6.2"
+
+[[projects]]
+  digest = "1:df084505ce8713372daaa6bb0b1f8cff204bbccdb900a8846df74d47c2177a63"
+  name = "github.com/libp2p/go-libp2p-peer"
+  packages = ["."]
+  pruneopts = "T"
+  revision = "a26c4b782bfe3b2570c539f69dc7777a45117a90"
+  version = "v2.3.5"
+
+[[projects]]
+  digest = "1:01add77c3ed14d47fbf1d2a2182fd7737b4774959147700213066479465c280a"
+  name = "github.com/mattn/go-colorable"
+  packages = ["."]
+  pruneopts = "T"
+  revision = "167de6bfdfba052fa6b2d3664c8f5272e23c9072"
+  version = "v0.0.9"
+
+[[projects]]
+  digest = "1:d4d17353dbd05cb52a2a52b7fe1771883b682806f68db442b436294926bbfafb"
+  name = "github.com/mattn/go-isatty"
+  packages = ["."]
+  pruneopts = "T"
+  revision = "0360b2af4f38e8d38c7fce2a9f4e702702d73a39"
+  version = "v0.0.3"
 
 [[projects]]
   branch = "master"
@@ -123,6 +191,18 @@
   pruneopts = "T"
   revision = "8be2a682ab9f254311de1375145a2f78a809b07d"
   version = "v1.0.8"
+
+[[projects]]
+  digest = "1:fc7601e8a28dc9b963f9ad0367a6bf6a3467ea55553d4a1c31d728e2eb517a80"
+  name = "github.com/opentracing/opentracing-go"
+  packages = [
+    ".",
+    "ext",
+    "log",
+  ]
+  pruneopts = "T"
+  revision = "1949ddbfd147afd4d964a9f00b24eb291e0e7c38"
+  version = "v1.0.2"
 
 [[projects]]
   digest = "1:22aa691fe0213cb5c07d103f9effebcb7ad04bee45a0ce5fe5369d0ca2ec3a1f"
@@ -174,6 +254,14 @@
 
 [[projects]]
   branch = "master"
+  digest = "1:f3a0bbb2fc733a0e66554756f9afd14cbcad48c2a3aa80af3cb225e1b380139a"
+  name = "github.com/whyrusleeping/go-logging"
+  packages = ["."]
+  pruneopts = "T"
+  revision = "0457bb6b88fc1973573aaf6b5145d8d3ae972390"
+
+[[projects]]
+  branch = "master"
   digest = "1:2c4971d2da7bb27fa225a119dc96af2119dd096869c1228438a0b5fda5f6fe15"
   name = "golang.org/x/crypto"
   packages = [
@@ -188,6 +276,7 @@
   digest = "1:d6898619e5c42d9ce801d56c471250879946ae80dfd5940beff172126a3e8ad1"
   name = "golang.org/x/net"
   packages = [
+    "context",
     "html",
     "html/atom",
     "html/charset",
@@ -199,7 +288,10 @@
   branch = "master"
   digest = "1:cf05848629661fe016ffdf4b18febeb06986760cb4b70df246b16bc81f9a302e"
   name = "golang.org/x/sys"
-  packages = ["cpu"]
+  packages = [
+    "cpu",
+    "unix",
+  ]
   pruneopts = "T"
   revision = "1b2967e3c290b7c545b3db0deeda16e9be4f98a2"
 
@@ -235,6 +327,8 @@
   input-imports = [
     "github.com/ethereum/go-ethereum/crypto",
     "github.com/ethereum/go-ethereum/p2p/discover",
+    "github.com/libp2p/go-libp2p-crypto",
+    "github.com/libp2p/go-libp2p-peer",
     "github.com/multiformats/go-multiaddr",
     "github.com/stretchr/testify/require",
   ]
