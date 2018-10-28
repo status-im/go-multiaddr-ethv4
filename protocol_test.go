@@ -5,12 +5,12 @@ import (
 	"math/rand"
 	"testing"
 
-	crypto "github.com/libp2p/go-libp2p-crypto"
-	peer "github.com/libp2p/go-libp2p-peer"
+	"github.com/libp2p/go-libp2p-crypto"
+	"github.com/libp2p/go-libp2p-peer"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/p2p/discover"
 	ma "github.com/multiformats/go-multiaddr"
+	"github.com/ethereum/go-ethereum/p2p/enode"
 )
 
 func TestETHv4(t *testing.T) {
@@ -25,7 +25,7 @@ func TestETHv4(t *testing.T) {
 	nid, err := PeerIDToNodeID(rst)
 	require.NoError(t, err)
 	require.Equal(t,
-		discover.PubkeyID((*ecdsa.PublicKey)(pubkey.(*crypto.Secp256k1PublicKey))),
+		enode.PubkeyToIDV4((*ecdsa.PublicKey)(pubkey.(*crypto.Secp256k1PublicKey))),
 		nid,
 	)
 }
