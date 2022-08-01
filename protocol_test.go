@@ -1,12 +1,12 @@
 package ethv4
 
 import (
-	"crypto/ecdsa"
 	"math/rand"
 	"testing"
 
 	"github.com/stretchr/testify/require"
 
+	btcec "github.com/btcsuite/btcd/btcec/v2"
 	"github.com/ethereum/go-ethereum/p2p/enode"
 	"github.com/libp2p/go-libp2p-core/crypto"
 	"github.com/libp2p/go-libp2p-core/peer"
@@ -25,7 +25,7 @@ func TestETHv4(t *testing.T) {
 	nid, err := PeerIDToNodeID(rst)
 	require.NoError(t, err)
 	require.Equal(t,
-		enode.PubkeyToIDV4((*ecdsa.PublicKey)(pubkey.(*crypto.Secp256k1PublicKey))),
+		enode.PubkeyToIDV4((*btcec.PublicKey)(pubkey.(*crypto.Secp256k1PublicKey)).ToECDSA()),
 		nid,
 	)
 }
